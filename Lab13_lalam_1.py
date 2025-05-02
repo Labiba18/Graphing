@@ -27,4 +27,5 @@ ax.grid(True)
 ax.tick_params(labelsize=12)
 
 # Show the plot
+plt.savefig('sinx_over_x_graph.png', bbox_inches='tight')
 plt.show()
