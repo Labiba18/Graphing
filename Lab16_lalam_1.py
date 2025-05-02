@@ -1,8 +1,8 @@
 """
-Program Name: Lab16_labalam_data1.py
+Program Name: Lab16_lalam_1.py
 Author: Labiba Alam
-Description: Reads and plots U.S. unemployment data from FRED (UNRATE).
-Date: 2025-05-02
+Description: This program reads and visualizes U.S. unemployment rate data from the FRED dataset (UNRATE) using matplotlib.
+Date: 5/2/25
 """
 
 import csv
@@ -11,6 +11,9 @@ import matplotlib.pyplot as plt
 
 filename = 'unemployment.csv'
 
+"""
+Read the header row and display each column index with its name.
+"""
 with open(filename) as f:
     reader = csv.reader(f)
     header_row = next(reader)
@@ -18,12 +21,14 @@ with open(filename) as f:
     for index, column_header in enumerate(header_row):
         print(index, column_header)
 
-# Now extract the data and plot
+"""
+Extract the dates and unemployment rates from the file.
+"""
 dates, rates = [], []
 
 with open(filename) as f:
     reader = csv.reader(f)
-    next(reader)  # skip header again
+    next(reader) 
 
     for row in reader:
         try:
@@ -35,6 +40,9 @@ with open(filename) as f:
             dates.append(current_date)
             rates.append(rate)
 
+"""
+Plot the unemployment data using matplotlib.
+"""
 plt.style.use('seaborn-v0_8-dark-palette')
 fig, ax = plt.subplots()
 ax.plot(dates, rates, linewidth=2)
