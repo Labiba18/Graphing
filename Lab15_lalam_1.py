@@ -1,7 +1,7 @@
 """
 Program Name: Lab15_lalam_graph1.py
 Author: Labiba Alam
-Description: Plotting sin(x)/x for Lab 13 graph assignment
+Description: Plotting sin(x)/x for Lab 15 graph assignment
 Date: 4/30/25
 """
 
